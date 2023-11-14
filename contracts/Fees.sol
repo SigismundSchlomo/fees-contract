@@ -8,7 +8,7 @@ contract Fees is Ownable {
     address payAddress;
     uint feePercent;
     
-    function setGasPrice(uint price) public {
+    function setGasPrice(uint price) public ownerOnly() {
         gasPrice = price;
     }
 
@@ -16,11 +16,11 @@ contract Fees is Ownable {
         return gasPrice;
     }
 
-    function setPayAddress(address addr) public {
+    function setPayAddress(address addr) public ownerOnly() {
         payAddress = addr;
     }
 
-    function setFeePercent(uint percent) public {
+    function setFeePercent(uint percent) public ownerOnly() {
         feePercent = percent;
     }
 
