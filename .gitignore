@@ -1,0 +1,8 @@
+.secret
+.env
+.env.test
+.vscode
+build
+node_modules
+*.log
+*.zip
