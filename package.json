@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "deploy": "hardhat run scripts/deploy.ts --network local",
+    "compile": "hardhat compile --force"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "hardhat": "^2.19.1"
