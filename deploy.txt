@@ -1,0 +1,44 @@
+
+> deploy
+> hardhat run scripts/deploy.ts --network local
+
+
+
+Fees deployed to: BaseContract {
+  target: '0x2C6808Be96aB532DA69d09137E4632C8C513A33B',
+  interface: Interface {
+    fragments: [
+      [FunctionFragment],
+      [FunctionFragment],
+      [FunctionFragment],
+      [FunctionFragment],
+      [FunctionFragment],
+      [FunctionFragment],
+      [FunctionFragment]
+    ],
+    deploy: ConstructorFragment {
+      type: 'constructor',
+      inputs: [],
+      payable: false,
+      gas: null
+    },
+    fallback: null,
+    receive: false
+  },
+  runner: HardhatEthersSigner {
+    _gasLimit: undefined,
+    address: '0x4c9785451bb2CA3E91B350C06bcB5f974cA33F79',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'local',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: [],
+      _isHardhatNetworkCached: false,
+      _transactionHashPollingInterval: undefined
+    }
+  },
+  filters: {},
+  fallback: null,
+  [Symbol(_ethersInternal_contract)]: {}
+}

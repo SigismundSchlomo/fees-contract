@@ -1,14 +1,12 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 pragma solidity >= 0.8.21;
 
-import "./Ownable.sol";
-
-contract Fees is Ownable {
+contract Fees {
     uint gasPrice;
     address payAddress;
     uint feePercent;
     
-    function setGasPrice(uint price) public ownerOnly() {
+    function setGasPrice(uint price) public {
         gasPrice = price;
     }
 
@@ -16,11 +14,11 @@ contract Fees is Ownable {
         return gasPrice;
     }
 
-    function setPayAddress(address addr) public ownerOnly() {
+    function setPayAddress(address addr) public {
         payAddress = addr;
     }
 
-    function setFeePercent(uint percent) public ownerOnly() {
+    function setFeePercent(uint percent) public {
         feePercent = percent;
     }
 
