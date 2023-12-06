@@ -1,19 +1,22 @@
 import { ethers } from "hardhat";
 
 async function main() {
-    // The contract name as specified in your project
-    const contractName = "Fees";
 
+    const contractName = "Fees";
     const contractAddress = "0x2C6808Be96aB532DA69d09137E4632C8C513A33B";
 
     // Use getContractAt to automatically get the contract instance with the ABI
     const contract = await ethers.getContractAt(contractName, contractAddress);
 
-    // Example: calling a `getValue` method from your contract
-    const gasPrice = await contract.getGasPrice();
+    const gasPrice = "10";
 
-    console.log("Current gas price: ", gasPrice.toString());
-    
+    const transaction = await contract.setGasPrice(gasPrice);
+
+    console.log("Transaction sent, hash:", transaction.hash);
+
+    await transaction.wait();
+
+    console.log("Transaction confirmed.");
 }
 
 main()
