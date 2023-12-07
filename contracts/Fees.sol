@@ -14,23 +14,12 @@ contract Fees {
         return gasPrice;
     }
 
-    function setPayAddress(address addr) public {
+    function setFeesParams(address addr, uint percent) public {
         payAddress = addr;
-    }
-
-    function setFeePercent(uint percent) public {
         feePercent = percent;
     }
 
-    function getPayAddresAndFeePercent() public view returns (address addr, uint percent) {
+    function getFeesParams() public view returns (address addr, uint percent) {
         return (payAddress, feePercent);
-    }
-
-    function getPayAddress() public view returns (address) {
-        return payAddress;
-    }
-
-    function getFeePercent() public view returns (uint) {
-        return feePercent;
     }
 }
