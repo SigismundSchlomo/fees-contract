@@ -11,8 +11,10 @@ async function main() {
 
     // Example: calling a `getValue` method from your contract
     const gasPrice = await contract.getGasPrice();
+    const feesParams = await contract.getFeesParams();
 
     console.log("Current gas price: ", gasPrice.toString());
+    console.log("Curernt fees params: ", feesParams.toString());
     
 }
 
